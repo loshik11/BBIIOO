@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phichlid</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background: #2a003f;
+      overflow: hidden;
+      color: white;
+    }
+
+    .background {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.4);
+      animation: float 20s infinite;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) scale(0.5);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) scale(1.2);
+        opacity: 0;
+      }
+    }
+
+    .card {
+      position: relative;
+      z-index: 1;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      max-width: 400px;
+      box-shadow: 0 0 15px rgba(255, 0, 255, 0.7);
+    }
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 3px solid #fff;
+    }
+
+    h1 {
+      margin: 10px 0;
+      color: #d86bff;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    .links {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .links img {
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .links img:hover {
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="background">
+    <div class="circle" style="width:40px; height:40px; left:10%; animation-duration:25s;"></div>
+    <div class="circle" style="width:60px; height:60px; left:30%; animation-duration:18s;"></div>
+    <div class="circle" style="width:30px; height:30px; left:50%; animation-duration:22s;"></div>
+    <div class="circle" style="width:50px; height:50px; left:70%; animation-duration:20s;"></div>
+    <div class="circle" style="width:40px; height:40px; left:85%; animation-duration:26s;"></div>
+  </div>
+
+  <div class="card">
+    <img src="avatar.png" alt="Avatar" class="avatar">
+    <h1>Phichlid</h1>
+    <p>
+      Привет! Я <b>Phichlid</b>, мне 16 лет.<br>
+      Увлекаюсь Minecraft, изучаю кодинг и сейчас учу <b>C++</b>.<br><br>
+      Живу в <b>Украине</b>.<br><br>
+      <b>Я начинающий ютубер</b>, стремлюсь создавать стильные проекты с душой.
+    </p>
+    <div class="links">
+      <a href="https://www.youtube.com/@Phichlid" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+      </a>
+      <a href="https://discord.com" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/3670/3670157.png" alt="Discord">
+      </a>
+      <a href="https://funpay.com" target="_blank">
+        <img src="funpay.png" alt="FunPay">
+      </a>
+    </div>
+  </div>
+</body>
+</html>
